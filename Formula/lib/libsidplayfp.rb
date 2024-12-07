@@ -19,7 +19,7 @@ class Libsidplayfp < Formula
   depends_on "libgcrypt"
 
   def install
-    system "autoreconf", "-vfi" if build.head?
+    system "autoreconf", "--force", "--install", "--verbose" if build.head?
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
   end
