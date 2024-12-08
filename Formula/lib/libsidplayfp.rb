@@ -35,6 +35,6 @@ class Libsidplayfp < Formula
       }
     C
     system ENV.cxx, "test.cpp", "-L#{lib}", "-I#{include}", "-lsidplayfp", "-o", "test"
-    assert_equal version.to_s, shell_output("./test") unless head?
+    assert_equal version.to_s, shell_output("./test")
   end
 end
